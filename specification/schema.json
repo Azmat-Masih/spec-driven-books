@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Book Chapter Schema",
+  "type": "object",
+  "properties": {
+    "chapterNumber": {
+      "type": "integer",
+      "description": "The unique number of the chapter (1-10)",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the chapter"
+    },
+    "summary": {
+      "type": "string",
+      "description": "A brief summary of the chapter content"
+    },
+    "content": {
+      "type": "string",
+      "description": "The full Markdown content of the chapter"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of keywords relevant to the chapter"
+    }
+  },
+  "required": ["chapterNumber", "title", "summary", "content"]
+}
